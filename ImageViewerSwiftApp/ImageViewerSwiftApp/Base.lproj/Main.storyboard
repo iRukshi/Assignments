@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageViewerSwiftApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MnB-oV-GR9">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u0U-4N-7FU">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="759"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Tlb-c5-mYe" appends="YES" id="SUw-Qc-wD3"/>
+                                            <outletCollection property="gestureRecognizers" destination="Bp2-AN-ad2" appends="YES" id="eSz-9r-VSY"/>
+                                        </connections>
+                                    </imageView>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="kHS-sr-3fO">
+                                        <rect key="frame" x="171.66666666666666" y="354.66666666666669" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="gZl-Nr-Kjs"/>
+                                            <constraint firstAttribute="height" constant="50" id="zS6-Aq-iKs"/>
+                                        </constraints>
+                                    </activityIndicatorView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vU-EM-PCq">
+                                        <rect key="frame" x="0.0" y="559" width="393" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="GC0-8H-gBe"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="ndB-Sf-0zz"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="g5g-Fl-aN1"/>
+                                        </connections>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="kHS-sr-3fO" firstAttribute="centerX" secondItem="MnB-oV-GR9" secondAttribute="centerX" id="55E-4j-03t"/>
+                                    <constraint firstAttribute="trailing" secondItem="2vU-EM-PCq" secondAttribute="trailing" id="KOJ-fq-94b"/>
+                                    <constraint firstItem="u0U-4N-7FU" firstAttribute="top" secondItem="MnB-oV-GR9" secondAttribute="top" id="PNK-Y0-QVX"/>
+                                    <constraint firstItem="u0U-4N-7FU" firstAttribute="leading" secondItem="MnB-oV-GR9" secondAttribute="leading" id="T3p-vz-WXP"/>
+                                    <constraint firstAttribute="bottom" secondItem="2vU-EM-PCq" secondAttribute="bottom" id="Y2r-Lp-NJp"/>
+                                    <constraint firstAttribute="trailing" secondItem="u0U-4N-7FU" secondAttribute="trailing" id="Znv-c9-eZJ"/>
+                                    <constraint firstItem="2vU-EM-PCq" firstAttribute="leading" secondItem="MnB-oV-GR9" secondAttribute="leading" id="h0D-ov-wPX"/>
+                                    <constraint firstAttribute="bottom" secondItem="u0U-4N-7FU" secondAttribute="bottom" id="ldm-Of-1Z7"/>
+                                    <constraint firstItem="kHS-sr-3fO" firstAttribute="centerY" secondItem="MnB-oV-GR9" secondAttribute="centerY" id="wtm-BL-HHm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MnB-oV-GR9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CnM-Y6-uho"/>
+                            <constraint firstItem="MnB-oV-GR9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="JRy-w2-WNB"/>
+                            <constraint firstItem="MnB-oV-GR9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XHh-cT-7yi"/>
+                            <constraint firstItem="MnB-oV-GR9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="dTl-wI-f3a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="kHS-sr-3fO" id="oDl-55-Sbe"/>
+                        <outlet property="imageView" destination="u0U-4N-7FU" id="r3b-8Y-PVH"/>
+                        <outlet property="pickerView" destination="2vU-EM-PCq" id="BQz-8e-4Ff"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Tlb-c5-mYe">
+                    <connections>
+                        <action selector="handleSwipe:" destination="BYZ-38-t0r" id="uAf-42-BJo"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="Bp2-AN-ad2">
+                    <connections>
+                        <action selector="handleSwipe:" destination="BYZ-38-t0r" id="dGZ-Fp-GtK"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="57.251908396946561" y="-2.1126760563380285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
